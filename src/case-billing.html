@@ -1,0 +1,133 @@
+<!-- CASE STUDY: SUBSCRIPTION MANAGEMENT -->
+<main class="page case" id="billing">
+<section class="chero">
+<nav class="nav"><a href="#home" data-go="home">Clara Ferreira</a><a href="#about" data-go="about">About</a><a href="#contact" data-contact="">Contact</a></nav>
+<div class="chead">
+<a class="back" href="#home" data-go="home"><span class="ar">←</span> All projects</a>
+<h1 class="serif">Fewer failed payments, and billing built to grow with every new service</h1>
+<dl class="cmeta">
+<div><dt>Role</dt><dd>Design Lead</dd></div>
+<div><dt>Team</dt><dd>Product, Engineering, Billing team</dd></div>
+<div><dt>Platform</dt><dd>Internal console, desktop and mobile</dd></div>
+<div><dt>Status</dt><dd>Live, with more phases rolling out</dd></div>
+</dl>
+</div>
+</section>
+
+<section class="stats cr" aria-label="Results">
+<div><p class="serif">−82%</p><span>failed payments</span></div>
+<div><p class="serif">−84%</p><span>accounts in dunning</span></div>
+<div><p class="serif">−41%</p><span>manual billing tickets</span></div>
+</section>
+
+<section class="proto top cr" id="billing-proto">
+<div class="proto-head">
+<h2 class="serif">Try the console</h2>
+<p>Open an account, check its payment methods, change its plan, or walk through a dunning case. Names and figures in the prototype are fictional.</p>
+<div class="dev" role="group" aria-label="Prototype size"><button class="btn on" type="button" data-dev="desktop">Desktop</button><button class="btn" type="button" data-dev="mobile">Mobile</button></div>
+</div>
+<div class="stage"><div class="sizer" id="proto-sizer"><div class="scaler" id="proto-scaler"><div class="frame desktop" id="proto-frame"><div class="bar"><span>Subscription Management</span><span>Billing console</span></div><iframe id="proto-iframe" title="Subscription Management interactive prototype" loading="lazy"></iframe></div></div></div></div>
+</section>
+
+<section class="ctext cr"><div>
+<h2 class="serif">My role</h2>
+<p>I was the design lead, working with product, engineering and the billing team from the first discovery session to the specs engineering built from. The flows, the visual language and the decisions are mine.</p>
+<p>The interactive prototype was built with AI, from my designs and direction.</p>
+</div></section>
+
+<section class="ctext cr"><div>
+<h2 class="serif">The problem</h2>
+<p>Billing ran on Stripe’s built-in subscription logic. It could charge a card, but every failed payment and every plan that didn’t fit its rules turned into manual work for the billing team.</p>
+</div></section>
+
+<section class="statement cr">
+<p class="serif">Stripe reports. The platform decides.</p>
+<span>Stripe keeps the charge and the stored card. Everything else, from plans to dunning, moved into the platform.</span>
+</section>
+
+<section class="ctext cr"><div>
+<h2 class="serif">How I built it</h2>
+<ol class="steps">
+<li><span class="meta">01 Discovery</span><p>Short working sessions with the billing team to map what they did by hand and what could run on its own.</p></li>
+<li><span class="meta">02 Prototype</span><p>Reviewed a working console with the team early, so their feedback shaped the flows before handoff.</p></li>
+<li><span class="meta">03 Rules</span><p>Turned each decision into a business rule, like how many payment methods an account can hold and in what order they’re charged.</p></li>
+<li><span class="meta">04 Specs</span><p>Wrote screen-by-screen specs with acceptance criteria, so engineering built exactly what was agreed.</p></li>
+</ol>
+</div></section>
+
+<section class="statement small cr">
+<p class="serif">Two problems worth solving</p>
+<span>Out of everything the billing team handled by hand, two problems mattered most to the business.</span>
+</section>
+
+<section class="split cr">
+<figure class="fig"><img src="{{B_PAYMENT}}" alt="Payment methods tab for one account: a default card, backup method 1 as a bank account (ACH) and backup method 2 as a card, each noting when it is used"><figcaption>Fig. A: A default method and two backups, charged in order</figcaption></figure>
+<div class="ctext-in">
+<span class="meta num">01</span>
+<h3 class="serif">One card failing shouldn’t fail the payment</h3>
+<p>Accounts can now keep up to three payment methods: a default and two backups, by card or bank account. When a charge fails, the next method is tried automatically, before the account ever reaches dunning.</p>
+<p class="hit"><span class="serif">−84%</span> accounts in dunning</p>
+</div>
+</section>
+
+<section class="split rev cr">
+<div class="ctext-in">
+<span class="meta num">02</span>
+<h3 class="serif">Plans built from parts</h3>
+<p>The business was expanding past its current plans, and the old setup couldn’t take a new service without rebuilding billing around it. In the new hub, plans, add-ons and coupons are separate building blocks, so a new service becomes a new plan instead of a new project.</p>
+</div>
+<figure class="fig"><img src="{{B_PLANS}}" alt="Plans screen with five plan cards, each listing design types and per-slot pricing for self-managed and fully-managed support, and a New plan button"><figcaption>Fig. B: Plans, each with its own pricing per slot and support level</figcaption></figure>
+</section>
+
+<figure class="fig wide cr"><img src="{{B_CHANGE}}" alt="Change subscription screen: four plan cards with Full Stack selected, and a sidebar with slot stepper, management style, add-ons and the total due today"><figcaption>Fig. C: Changing a plan, with the total recalculated on every choice</figcaption></figure>
+
+<section class="ctext cr"><div>
+<h3 class="serif">Reusing what customers already know</h3>
+<p>To change a plan on someone’s behalf, the billing team uses the same builder customers see. The total updates with every choice, and Confirm stays off until something actually changes.</p>
+</div></section>
+
+<section class="split cr">
+<figure class="fig"><img src="{{B_DUNNING_DETAIL}}" alt="Dunning details for one account: payment failed badge, amount due, status, attempts, account health bar and a timeline of notices and retries"><figcaption>Fig. D: One dunning case, from first notice to next retry</figcaption></figure>
+<div class="ctext-in">
+<h3 class="serif">When every method fails</h3>
+<p>The account enters a recovery sequence the team configures: reminders and retries, with a timeline of what happened and what comes next. Fewer accounts land here now, and the ones that do don’t need a support ticket.</p>
+</div>
+</section>
+
+<section class="statement small cr">
+<p class="serif">A way out before cancelling</p>
+<span>Cancelling starts with a choice: leave, or move to a lighter Maintenance plan that keeps the account alive.</span>
+</section>
+
+<section class="split phones-row cr">
+<div class="phones">
+<figure class="fig"><img src="{{B_M_LIST}}" alt="Phone view of Subscription management with the accounts table shown as stacked cards"><figcaption>Fig. E: Accounts as cards</figcaption></figure>
+<figure class="fig"><img src="{{B_M_ACCOUNT}}" alt="Phone view of an account with Change subscription as a full-width button and scrolling tabs"><figcaption>Fig. F: Account overview</figcaption></figure>
+</div>
+<div class="ctext-in">
+<h3 class="serif">Still usable on a phone</h3>
+<p>Tables become cards and tabs scroll instead of wrapping. Same console, real breakpoints.</p>
+</div>
+</section>
+
+<section class="ctext cr"><div>
+<h2 class="serif">Small rules that kept it consistent</h2>
+<ol class="rules">
+<li><span class="meta">Buttons</span><p>One primary action per view, labeled with exactly what it does: “Confirm subscription change”, never “Submit”.</p></li>
+<li><span class="meta">Status</span><p>Color only ever means status. A badge is never colored for emphasis, so an account and its invoices always agree.</p></li>
+<li><span class="meta">Proration</span><p>The unused-time credit and the new charge appear before the total, because a total on its own invites a support ticket.</p></li>
+</ol>
+</div></section>
+
+<section class="cend cr">
+<span class="serif">End</span>
+<p class="serif">Subscription Management</p>
+<img src="{{ICON}}" alt="">
+</section>
+
+<nav class="cnav rule cr" aria-label="Projects">
+<a class="btn" href="#home" data-go="home"><span class="ar">←</span> All projects</a>
+<div class="next"><span class="meta">Next project</span><p class="serif">Catalog Manager</p><span class="btn soon">Coming soon</span></div>
+</nav>
+</main>
+<textarea id="proto-src" hidden aria-hidden="true">{{PROTO_SRC}}</textarea>
